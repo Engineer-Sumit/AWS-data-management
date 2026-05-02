@@ -1,158 +1,119 @@
-📘 Student Management System (AWS Serverless Project)
+# 📘 Student Management System (AWS Serverless)
 
-A fully serverless Student Management System built using AWS Lambda, DynamoDB, API Gateway, S3, and CloudFront, with a modern HTML/JavaScript frontend.
+A fully serverless Student Management System built using AWS services to manage student records efficiently. This project demonstrates how scalable cloud architecture can replace traditional backend systems.
 
-This project supports:
+---
 
-Add Student
+## 🎯 Problem Statement
+Managing student records manually or using traditional backend systems can be inefficient, hard to scale, and costly.
 
-Load Students
+---
 
-Edit Student
+## 💡 Solution
+Developed a **serverless student management system** using AWS that handles CRUD operations without managing any servers.
 
-Delete Student
+---
 
-Search
+## 🚀 Key Features
+- ➕ Add new student records  
+- 📋 View all students  
+- ✏️ Update student details  
+- ❌ Delete student records  
+- 🔍 Search students by name or ID  
+- 📊 Sort table columns  
+- 🎨 Modern responsive UI  
+- ☁️ 100% serverless architecture  
 
-Sort
+---
 
-Modern UI
+## 🛠️ Tech Stack
 
-Fully deployed on AWS
+**AWS Services:**
+- AWS Lambda  
+- DynamoDB  
+- API Gateway  
+- S3  
+- CloudFront  
+- IAM  
 
-🚀 Features
-✔ Add new student
+**Frontend:**
+- HTML, CSS, JavaScript (jQuery)
 
-Stores student records in DynamoDB using AWS Lambda (POST method).
+---
 
-✔ View all students
+## 🏗️ Architecture
 
-Loads data via Lambda (GET) and displays in a UI table.
-
-✔ Update student details
-
-Modifies existing records using Lambda (PUT).
-
-✔ Delete student
-
-Removes selected student using Lambda (DELETE).
-
-✔ Search students
-
-Real-time search by name or ID.
-
-✔ Table sorting
-
-Click any column header to sort.
-
-✔ Modern UI
-
-Clean, responsive design built with pure HTML, CSS, and jQuery.
-
-✔ 100% Serverless
-
-No backend server required — all handled by AWS.
-
-🏗️ Architecture Diagram
 Frontend (HTML + JS)
-        │
-    CloudFront
-        │
-        ▼
-      S3 Bucket (Static Website)
-        │
-        ▼
-  API Gateway (CRUD Routes)
-        │
-        ▼
-   Lambda Functions (Python)
-        │
-        ▼
-     DynamoDB Table
+│
+CloudFront
+│
+▼
+S3 Bucket
+│
+▼
+API Gateway
+│
+▼
+Lambda (Python)
+│
+▼
+DynamoDB
 
-🛠️ AWS Services Used
-Service	Purpose
-S3	Hosts the frontend (HTML, CSS, JS)
-CloudFront	CDN to deliver the website globally
-API Gateway	Exposes REST endpoints (GET/POST/PUT/DELETE)
-Lambda (Python)	Backend logic for CRUD operations
-DynamoDB	Stores student records
-IAM	Permissions for Lambda to access DynamoDB
-🧠 DynamoDB Table Design
+---
 
-Table Name:
+## 🧠 Database Design
 
-studentData
+**Table Name:** `studentData`
 
-Attribute	Type	Description
-studentid	STRING	Primary Key
-name	STRING	Student name
-class	STRING	Class / grade
-age	NUMBER	Student age
-💻 Frontend Code Includes
+| Attribute | Type | Description |
+|----------|------|------------|
+| studentid | STRING | Primary Key |
+| name | STRING | Student Name |
+| class | STRING | Class/Grade |
+| age | NUMBER | Student Age |
 
-Modern styled UI
+---
 
-Edit/delete buttons
+## ⚙️ How It Works
+- Frontend sends API requests via API Gateway  
+- Lambda functions process requests  
+- Data is stored and retrieved from DynamoDB  
+- Results are displayed dynamically in UI  
 
-Search bar
+---
 
-Loading indicator
+## 📷 Project Preview
+<!-- Add your UI screenshot -->
+![Project Screenshot](add-your-image-link-here)
 
-Dynamic table rendering
+---
 
-AJAX calls to API Gateway
+## 🚀 Deployment Steps
+1. Upload frontend to S3 (Enable static hosting)  
+2. Create API Gateway (GET, POST, PUT, DELETE)  
+3. Connect Lambda functions  
+4. Configure CORS  
+5. Create DynamoDB table  
+6. Attach IAM permissions  
+7. Setup CloudFront  
 
-🧪 How to Deploy
-1️⃣ Upload frontend to S3 bucket
+---
 
-Turn on static website hosting
+## 📈 Impact
+- Reduced manual data handling  
+- Scalable and cost-efficient system  
+- Faster data access and operations  
 
-2️⃣ Create API Gateway REST API
+---
 
-Configure GET, POST, PUT, DELETE routes
+## 🔮 Future Improvements
+- Student image upload (S3)  
+- Authentication (AWS Cognito)  
+- Dashboard analytics  
+- Export to CSV/Excel  
 
-3️⃣ Attach Lambda functions
+---
 
-Enable Lambda Proxy Integration
-
-4️⃣ Add CORS support
-
-Allow: *
-
-Methods: GET, POST, PUT, DELETE, OPTIONS
-
-5️⃣ Create DynamoDB table
-
-Name: studentData
-
-Primary Key: studentid
-
-6️⃣ Attach IAM policies
-
-Allow Lambda to use DynamoDB (PutItem, UpdateItem, DeleteItem, Scan)
-
-7️⃣ Setup CloudFront
-
-Origin = S3 bucket website URL
-
-Invalidation: /* after update
-
-📦 Future Improvements (Optional)
-
-Student photo upload (S3)
-
-Pagination
-
-Export to CSV/Excel
-
-Login system (Cognito)
-
-Dashboard charts (Chart.js)
-
-Dark mode UI
-
-👤 Author
-
-Sumit Chowdhuary
-Built with 💙 using AWS Serverless Architecture.
+## 📫 Connect With Me
+- 📧 sumitchowdhuary4@gmail.com  
+- 💼 LinkedIn: https://www.linkedin.com/in/sumit-chowdhuary  

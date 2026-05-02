@@ -82,10 +82,6 @@ DynamoDB
 
 ---
 
-## 📷 Project Preview
-<!-- Add your UI screenshot -->
-![Project Screenshot](add-your-image-link-here)
-
 ---
 
 ## 🚀 Deployment Steps

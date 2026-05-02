@@ -82,8 +82,6 @@ DynamoDB
 
 ---
 
----
-
 ## 🚀 Deployment Steps
 1. Upload frontend to S3 (Enable static hosting)  
 2. Create API Gateway (GET, POST, PUT, DELETE)  
